@@ -119,9 +119,9 @@
     <main>
         <section id="herobanner">
             <div class="hero">
-                <div class="title">
-                    <h1>Indice de Qualidade do Ar</h1>
-                    <p>Vê a qualidade do ar em qualquer parte do Mundo!</p>
+                <div class="title" data-aos="fade-left">
+                    <h1>Air Quality Index</h1>
+                    <p>Check the air quality anywhere in the world!</p>
                 </div>
                 <div class="map">
                     <div name="airvisual_widget" key="66f3df862ac593fbfd3585a1"></div>
@@ -136,7 +136,7 @@
         </section>
         <section id="search_location">
             <div class="title">
-                <h1>Introduz a tua cidade!</h1>
+                <h1>Enter your city!</h1>
             </div>
             <div>
                 <select id="country-field" bind:value={country_selected} on:change={handleCountryChange}>
@@ -162,22 +162,22 @@
                     {/if}
                 </select>             
                 <button bind:this={button} on:click={handleAqi} class="button">
-                    Submeter
+                    Submit
                 </button>
             </div>
             <div id="aqi-widget">
                 <div class="cardContainer">
                     {#if aqius !== undefined}
                         <div class="card" style="background-color: {getAqiColor(aqius)}">
-                            <h2>Indice de Qualidade do Ar</h2>
+                            <h2>Air Quality Index</h2>
                             <h1>{aqius}</h1>     
                         </div>
                         <div class="card1">
-                            <h2>Maiores poluidores</h2>
+                            <h2>Greatest Pollutors</h2>
                             <h3>{mainus}</h3>
                         </div>
                         <div class="card2">
-                            <h2>Hora de atualização</h2>
+                            <h2>Last Time Update</h2>
                             <h3>{formatTs(ts)}</h3>
                         </div>
                         <div class="card3" id="pollutant">
@@ -230,7 +230,7 @@
         <section id="sec4" class="paralax">
             <div>
                 <Accordion open={true}>
-                    <span slot="head">Principais causas de má qualidade do ar?</span>
+                    <span slot="head">Main causes of poor air quality?</span>
                     <div slot="details">
                         <p>Air pollution can be created by both manmade and natural sources. Natural sources include windblown or kicked-up dust, dirt and sand, volcanic smoke, and burning materials. Manmade sources, meaning that pollution is created by the actions of human beings, tend to be the leading contributor to air pollution in cities and are inherently more able to be influenced by regulations. Manmade sources primarily include various forms of combustion, such as from gas-powered transportation (planes, trains, and automobiles) and industrial businesses (power plants, refineries, and factories), biomass burning (the burning of plant matter or coal for heating, cooking, and energy), and agriculture.
                             The contribution of various air pollution sources to a location’s air quality is highly dependent on the city’s location and regulations. Each location has its own mix of contributors and pollutants. Sources are commonly categorized into the following:
@@ -238,7 +238,7 @@
                     </div>
                 </Accordion>
                 <Accordion>
-                    <span slot="head">Industria</span>
+                    <span slot="head">Industry</span>
                     <div slot="details">
                         <p>
                             Industry includes pollution from facilities such as manufacturing factories, mines, and oil refineries as well as coal power plants and boilers for heat and power generation.
@@ -247,7 +247,7 @@
                     </div>
                 </Accordion>
                 <Accordion>
-                    <span slot="head">Agricultura</span>
+                    <span slot="head">Agriculture</span>
                     <div slot="details">
                         <p>
                             The heavy use of fertilizers on agricultural land is a significant contributor to fine-particulate air pollution. A study in Geophysical Research Letters found that pollution generated from farms outweighed all other manmade sources of PM in much of the United States, Europe, Russia, and China.2
@@ -256,7 +256,7 @@
                     </div>
                 </Accordion>
                 <Accordion>
-                    <span slot="head">Transportes</span>
+                    <span slot="head">Transports</span>
                     <div slot="details">
                         <p>
                             Air pollution from transport refers primarily to fuel combustion in motor vehicles, such as in cars, trucks, trains, planes, and ships. Transport emissions are a major contributor to elevated levels of fine particulate matter (PM2.5), ozone, and nitrogen dioxide (NO2).
@@ -265,7 +265,7 @@
                     </div>
                 </Accordion>
                 <Accordion>
-                    <span slot="head">Fontes Naturais</span>
+                    <span slot="head">Natural sources</span>
                     <div slot="details">
                         <p>
                             Air pollution from transport refers primarily to fuel combustion in motor vehicles, such as in cars, trucks, trains, planes, and ships. Transport emissions are a major contributor to elevated levels of fine particulate matter (PM2.5), ozone, and nitrogen dioxide (NO2).
@@ -274,7 +274,7 @@
                     </div>
                 </Accordion>
                 <Accordion>
-                    <span slot="head">Doméstico</span>
+                    <span slot="head">Domestic</span>
                     <div slot="details">
                         <p>
                             Air pollution from transport refers primarily to fuel combustion in motor vehicles, such as in cars, trucks, trains, planes, and ships. Transport emissions are a major contributor to elevated levels of fine particulate matter (PM2.5), ozone, and nitrogen dioxide (NO2).
@@ -283,7 +283,7 @@
                     </div>
                 </Accordion>
                 <Accordion>
-                    <span slot="head">Fogos e Queimadas a céu aberto</span>
+                    <span slot="head">Open air fires</span>
                     <div slot="details">
                         <p>
                             Air pollution from transport refers primarily to fuel combustion in motor vehicles, such as in cars, trucks, trains, planes, and ships. Transport emissions are a major contributor to elevated levels of fine particulate matter (PM2.5), ozone, and nitrogen dioxide (NO2).
@@ -295,7 +295,7 @@
         </section>
         <section id="sec5">
             <div class="carousel">
-                <h1>Notícias recentes</h1>
+                <h1>Recent News</h1>
                 <div class="card-container" >
                     {#each newsArticle as article}
                     <div class="cards">

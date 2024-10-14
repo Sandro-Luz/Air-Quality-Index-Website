@@ -21,8 +21,7 @@
     </a>
     <div class="nav-links">
         <a href="/" class="refs">Home</a>
-        <a href="/About" class="refs">About</a>
-        <a href="/Contact" class="refs">Contact</a>
+        <a href="/Contact" class="refs">Contacts</a>
     </div>
 </nav>
 
